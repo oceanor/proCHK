@@ -27,7 +27,7 @@ type Signature struct {
 var signatures []Signature
 
 const programName = "proCHK"
-const version = "1.01"
+const version = "1.02"
 
 func initializeSignatures() {
 	addSignature("JPG", "ffd8", "4a464946")
@@ -44,7 +44,11 @@ func initializeSignatures() {
 	addSignature("CR2", "49492a00", "4352")
 	addSignature("NEF", "4d4d002a", "4e696b6f6e")
 	addSignature("AI", "25215053", "")
+	addSignature("EPS", "c5d0d3c6", "")
 	addSignature("3DS", "4d4d", "")
+	addSignature("FPX", "d0cf11e0", "49006d006100670065")
+	addSignature("PSP", "5061696e742053686f702050726f", "")
+	addSignature("WPG", "ff575043", "")
 	addSignature("WAV", "52494646", "57415645")
 	addSignature("MP3", "494433", "")
 	addSignature("MID", "4d546864", "4d54726b")
@@ -63,10 +67,12 @@ func initializeSignatures() {
 	addSignature("MPEG", "000001ba", "")
 	addSignature("ASF", "3026b2758e66cf11a6d900aa0062ce6c", "")
 	addSignature("SWF", "465753", "")
+	addSignature("3GP", "000000", "667479703367")
 	addSignature("DOC", "d0cf11e0a1b11ae1", "4d6963726f736f667420576f7264")
 	addSignature("XLS", "d0cf11e0a1b11ae1", "4d6963726f736f667420457863656c")
 	addSignature("PPT", "d0cf11e0a1b11ae1", "4d6963726f736f667420506f776572506f696e74")
 	addSignature("PST", "2142444e", "")
+	addSignature("WRI", "31be", "00002e0d0a")
 	addSignature("DOCX", "504B0304", "776F72642F")
 	addSignature("XLSX", "504B0304", "786C2F")
 	addSignature("PPTX", "504B0304", "7070742F")
@@ -81,17 +87,24 @@ func initializeSignatures() {
 	addSignature("RAR", "52617221", "")
 	addSignature("7z", "377abcaf271c", "")
 	addSignature("GZ", "1f8b", "")
+	addSignature("ACE", "2a2a4143452a2a", "")
 	addSignature("ZIP", "504B0304", "")
 	addSignature("CAB", "4d534346", "")
 	addSignature("MDB", "000100005374616e64617264204a6574204442", "")
 	addSignature("ACCDB", "000100005374616e6461726420414345204442", "")
 	addSignature("SQLite3", "53514c69746520666f726d6174203300", "")
 	addSignature("DWG", "41433130", "")
+	addSignature("NC", "434446", "")
+	addSignature("PY", "2321", "707974686f6e")
+	addSignature("SH", "2321", "2f62696e2f")
+	addSignature("CLASS", "cafebabe", "")
+	addSignature("BDSPROJ", "3c3f786d6c", "426f726c616e6450726f6a656374")
 	addSignature("VCF", "424547494e3a5643415244", "")
 	addSignature("ICS", "424547494e3a5643414c454e444152", "")
 	addSignature("TORRENT", "64383a616e6e6f756e6365", "")
 	addSignature("EXE", "4d5a", "")
 	addSignature("DLL", "4d5a", "")
+	addSignature("OCX", "4d5a", "446c6c5265676973746572536572766572")
 	addSignature("RTF", "7b5c727466", "7b5c666f6e7474626c")
 	addSignature("CHM", "49545346", "")
 	addSignature("HLP", "3f5f0300", "")
@@ -100,6 +113,7 @@ func initializeSignatures() {
 	addSignature("CDR", "52494646", "434452")
 	addSignature("HTML", "3c21444f4354595045", "")
 	addSignature("HTM", "3c68746d6c", "")
+	addSignature("CLP", "50c30100", "")
 }
 
 func addSignature(ext, headerHex, containsHex string) {
